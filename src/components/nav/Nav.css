@@ -1,0 +1,31 @@
+.nav__list{
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   padding: 10px 0;
+}
+
+.nav__list .list__item{
+   margin-top: 15px;
+   margin-left: 50px;
+}
+
+.list__item a{
+   color: white;
+   font-size: 17px;
+   line-height: 100%;
+   padding: 16px 16px;
+}
+
+.list__item a:hover{
+   background-color: #fff;
+   color: #00B9DE;
+   border-radius: 5px;
+   transition: all 0.3s ease;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.nav__logo{
+   max-width: 150px;
+   height: 80px;
+}

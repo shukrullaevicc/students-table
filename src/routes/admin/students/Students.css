@@ -1,0 +1,67 @@
+.students {
+   width: 100%;
+   /* margin: 0 20px; */
+   border-collapse: collapse;
+}
+
+.students table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+.students th,
+.students td {
+   padding: 12px 15px;
+   text-align: left;
+}
+
+.students th {
+   background-color: #2c3e50;
+   color: #ffffff;
+   font-weight: bold;
+}
+
+.students tr {
+   border-bottom: 1px solid #dddddd;
+}
+
+.students tr:nth-of-type(even) {
+   background-color: #f3f3f3;
+}
+
+.students tr:hover {
+   background-color: #f1f1f1;
+}
+
+.students__delete {
+   text-align: center;
+   width: 50px;
+   height: 100%;
+}
+
+.students__btn {
+   background-color: rgb(255, 83, 83);
+   color: #ffffff;
+   border: none;
+   width: 100%;
+   padding: 8px 12px;
+   cursor: pointer;
+   border-radius: 4px;
+   transition: background-color 0.3s;
+}
+
+.students__btn:hover {
+   background-color: rgb(255, 0, 0);
+}
+
+.students__btn:active {
+   background-color: rgb(255, 0, 0);
+   transform: translateY(2px);
+}
+
+.students img {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover;
+}
