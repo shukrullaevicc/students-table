@@ -22,9 +22,14 @@ const Students = () => {
   }, []);
 
   const changeAndAddToTheListOfFallen = (studentId) => {
-    const updatedStudents = students.filter(student => student.id ==+ studentId);
-    dispatch({ type: 'ADD_TO_THE_LIST_OF_FALLEN', students: updatedStudents });
-  }
+    const updatedStudents = students.filter(student => student.id === studentId);
+    if (updatedStudents.length > 0) {
+      dispatch({ type: 'ADD_TO_THE_LIST_OF_FALLEN', students: updatedStudents });
+      let storedStudents = JSON.parse(localStorage.getItem('fallenStudents')) || [];
+      storedStudents.push(updatedStudents[0]);
+      localStorage.setItem('fallenStudents', JSON.stringify(storedStudents));
+    }
+  };
 
   return (
     <div className='students'>

@@ -1,9 +1,15 @@
 import AppContext from '../../../context/store';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './ExpelledStudents.css';
 
 const ExpelledStudents = () => {
-  const [state, dispatch] = useContext(AppContext);
+  const [state] = useContext(AppContext);
+  const [storedStudents, setStoredStudents] = useState([]);
+
+  useEffect(() => {
+    const students = JSON.parse(localStorage.getItem('fallenStudents')) || [];
+    setStoredStudents(students);
+  }, []);
 
   return (
     <div className='students'>
@@ -19,7 +25,7 @@ const ExpelledStudents = () => {
           </tr>
         </thead>
         <tbody>
-          {state.students.map((student) => (
+          {storedStudents.map((student) => (
             <tr key={student.id}>
               <td>{student.id}</td>
               <td>
